@@ -3,8 +3,10 @@ const app = express();
 const path = require("path");
 
 const assetUrl = path.join(__dirname, "assets");
+const cssUrl = path.join(__dirname, "static", "css");
 
 app.use(express.static(assetUrl));
+app.use(express.static(cssUrl));
 app.get("/", (req, res) => {
 const filePath = path.join(__dirname, "static", "html", "home.html");
 res.sendFile(filePath);

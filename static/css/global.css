@@ -1,0 +1,57 @@
+:root {
+    --dark-green: #026670;
+    --light-green: #9fedd7;
+    --green: green;
+    --red: #eb345e;
+    --light-yellow: #fef9c7;
+    --dark-yellow: #fce181;
+    --beige: #edeae5;
+    --white: white;
+    --black: black;
+    --gray: gray;
+  
+    --border: solid 1px var(--dark-green);
+}
+  
+html {
+    font-size: 62.5%;
+}
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    padding: 3rem;
+}
+
+header {
+    display:flex;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 7rem;
+    align-self: flex-end;
+    margin-left: 2rem;
+}
+
+.pad-logo {
+    height: 10rem;
+}
+
+.divider {
+    border-top: solid var(--gray) 1px;
+}
+
+.header-nav-container {
+    margin-top: 1rem;
+    display: flex;
+}
