@@ -19,32 +19,79 @@ html {
   
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-body {
-    padding: 3rem;
 }
 
 header {
     display:flex;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 55%;
+    }
+      
+}
+
+p {
+    line-height: 130%;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    color: var(--red);
+}
+
+h3 {
+    font-size: 2.2rem;
+    letter-spacing: 1px; 
+}
+
+.margin-lr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad-cont {
+    padding: 2rem;
 }
 
 header h1 {
-    font-size: 7rem;
+    font-size: 4rem;
     align-self: flex-end;
+    margin: 0;
     margin-left: 2rem;
 }
 
+@media screen and (max-width: 900px) {
+    .header-nav:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        flex: 1 1 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 4.5rem;
+    }
+}
+
+.header-nav:not(:last-child) {
+    margin-right: 8rem;
+}
+
 .pad-logo {
-    height: 10rem;
+    height: 6rem;
 }
 
 .divider {
@@ -52,6 +99,41 @@ header h1 {
 }
 
 .header-nav-container {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+  background-color: transparent;
+  color: var(--black);
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-yellow);
+}
+
+a:focus {
+  outline: var(--btn-outline);
+  outline-offset: 3px;
+}
+
+a:active {
+    color: var(--red);
+}
+
+.footer-nav-container {
+    height: 10vh;
+    background-color: var(--gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav {
+    color: var(--dark-green)
 }
