@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Nutrunner is a truck wheel nut polishing tool created by PAD Mechanical "
+    />
     <title>Products</title>
-    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/global.css" />
 
     <style>
-        .info-container {
-            margin: 2rem;
-        }
+      .info-container {
+        margin: 2rem;
+      }
 
+      .info-text {
+        margin-bottom: 1rem;
+        grid-column: 1 / 3;
+        padding-right: 40%;
+      }
+
+      .photo-container {
+        display: flex;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .photo-container img {
+        height: 30rem;
+        margin-right: 1rem;
+      }
+
+      @media screen and (max-width: 900px) {
         .info-text {
-            margin-bottom: 1rem;
-            grid-column: 1 / 3;
-            padding-right: 40%;
+          padding-right: 0;
         }
+      }
 
-        .photo-container {
-            display: flex;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-
-        }
-
+      @media screen and (max-width: 600px) {
         .photo-container img {
-            height: 30rem;
-            margin-right: 1rem;
+          height: auto;
+          width: 100%;
         }
-
-        @media screen and (max-width: 900px) {
-            .info-text {
-                padding-right: 0;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .photo-container img {
-                height: auto;
-                width: 100%
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <section class="pad-cont">
-        <header>
-            <img src="/logored.gif" alt="Company Logo" class="pad-logo">
-            <h1>PAD Mechanical Inc.</h1>
-        </header>
-        <div class="divider"></div>
-        <nav class="header-nav-container">
-            <a href="/" class="header-nav">HOME</a>
-            <a href="/about" class="header-nav">ABOUT US</a>
-            <a href="/products" class="header-nav">POLISHING PRODUCTS</a>
-            <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
-            <a href="/pictures" class="header-nav">PICTURES</a>
-            <a href="/contact" class="header-nav">CONTACT</a>
-        </nav>
+      <header>
+        <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
+        <h1>PAD Mechanical Inc.</h1>
+      </header>
+      <div class="nav-divider"></div>
+      <nav class="header-nav-container">
+        <script src="/mobile_nav.js"></script>
+      </nav>
+      <script src="/nav.js"></script>
     </section>
-        <div class="divider margin-lr"></div>
-        <section class="info-container">
-            <p class="info-text"><b>PAD Mechanical Nutrunner Polishing Tool Kit</b>, is a polishing tool that aides in the polishing of a big truck aluminum rim. It specifically polishes the aluminum surface around the wheel nuts giving you a mirror finish. One of the hardest parts to polish, when polishing the aluminum rim. The kit Includes the Nutrunner polishing tool, polishing pad and a buffing strip. Replacement pads are available.</p>
-            <div class="photo-container">
-                <img src="/tool_pad_strip.jpg" alt="A buffing strip">
-                <img src="/gun_tool_pad.jpg" alt="a polishing pad">
-                <img src="/gun_tool_strip.jpg" alt="a buffing strip">
-            </div>
-        </section>
-        <div class="divider margin-lr"></div>
-        <section class="info-container">
-            <p class="info-text"><b>PAD Mechanical Nutrunner Buffing Strip</b>, is a replacement buffing strip, used with the Nutrunner Polishing Tool. It is used as a final buff in the polishing process of a big truck wheel, specifically the aluminum surface around the lug nuts, bringing it to a mirror finish.</p>
-            <div class="photo-container">
-                <img src="/buffing_strip.jpg" alt="A buffing strip">
-                <img src="/tool_buffing_strip.jpg" alt="a tool buffing strip">
-            </div>
-        </section>
-        <div class="divider margin-lr"></div>
-        <section class="info-container">
-            <p class="info-text"><b>PAD Mechanical Nutrunner Polishing Pad</b>, is a replacement polishing Pad, used with the Nutrunner Polishing Tool. It is used as a polishing pad for a big truck wheel, specifically the aluminum surface around the lug nuts, bringing it to a mirror finish.</p>
-            <div class="photo-container">
-                <img src="/polish_pad.jpg" alt="a polishing pad">
-                <img src="/tool_pad.jpg" alt="a tool buffing strip">
-            </div>
-        </section>
+    <div class="divider margin-lr"></div>
+    <section class="info-container">
+      <p class="info-text">
+        <b>PAD Mechanical Nutrunner Polishing Tool Kit</b>, is a polishing tool
+        that aides in the polishing of a big truck aluminum rim. It specifically
+        polishes the aluminum surface around the wheel nuts giving you a mirror
+        finish. One of the hardest parts to polish, when polishing the aluminum
+        rim. The kit Includes the Nutrunner polishing tool, polishing pad and a
+        buffing strip. Replacement pads are available.
+      </p>
+      <div class="photo-container">
+        <img src="/tool_pad_strip.jpg" alt="A buffing strip" />
+        <img src="/gun_tool_pad.jpg" alt="a polishing pad" />
+        <img src="/gun_tool_strip.jpg" alt="a buffing strip" />
+      </div>
+    </section>
+    <div class="divider margin-lr"></div>
+    <section class="info-container">
+      <p class="info-text">
+        <b>PAD Mechanical Nutrunner Buffing Strip</b>, is a replacement buffing
+        strip, used with the Nutrunner Polishing Tool. It is used as a final
+        buff in the polishing process of a big truck wheel, specifically the
+        aluminum surface around the lug nuts, bringing it to a mirror finish.
+      </p>
+      <div class="photo-container">
+        <img src="/buffing_strip.jpg" alt="A buffing strip" />
+        <img src="/tool_buffing_strip-min.jpg" alt="a tool buffing strip" />
+      </div>
+    </section>
+    <div class="divider margin-lr"></div>
+    <section class="info-container">
+      <p class="info-text">
+        <b>PAD Mechanical Nutrunner Polishing Pad</b>, is a replacement
+        polishing Pad, used with the Nutrunner Polishing Tool. It is used as a
+        polishing pad for a big truck wheel, specifically the aluminum surface
+        around the lug nuts, bringing it to a mirror finish.
+      </p>
+      <div class="photo-container">
+        <img src="/polish_pad.jpg" alt="a polishing pad" />
+        <img src="/tool_pad-min.jpg" alt="a tool buffing strip" />
+      </div>
+    </section>
     <footer>
-        <nav class="footer-nav-container">
-            <a href="/privacy" class="footer-nav">Privacy policy</a>
-            <a href="/safety" class="footer-nav">Tool Safety</a>
-            <a href="/warranty" class="footer-nav">Warranty</a>
-        </nav>
+      <nav class="footer-nav-container">
+        <a href="/privacy" class="footer-nav">Privacy policy</a>
+        <a href="/safety" class="footer-nav">Tool Safety</a>
+        <a href="/warranty" class="footer-nav">Warranty</a>
+      </nav>
     </footer>
-</body>
+  </body>
 </html>
