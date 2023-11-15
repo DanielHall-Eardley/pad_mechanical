@@ -69,7 +69,7 @@ h3 {
   color: var(--black);
 }
 
-#header-section {
+.header-section {
   background-color: var(--blue);
 }
 
@@ -168,5 +168,5 @@ a:active {
 }
 
 .footer-nav {
-  color: var(--dark-green);
+  color: var(--dark-yellow);
 }
