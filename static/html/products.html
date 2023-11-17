@@ -18,7 +18,8 @@
       .info-text {
         margin-bottom: 1rem;
         grid-column: 1 / 3;
-        padding-right: 40%;
+        padding-right: 20%;
+        padding-left: 20%;
       }
 
       .photo-container {
@@ -35,6 +36,7 @@
       @media screen and (max-width: 900px) {
         .info-text {
           padding-right: 0;
+          padding-left: 0;
         }
       }
 
@@ -47,18 +49,17 @@
     </style>
   </head>
   <body>
-    <section class="pad-cont header-section">
-      <header>
-        <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
-        <h1>PAD Mechanical Inc.</h1>
+    <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
+    <header>
+      <div class="title-container">
+        <h1 class="main-title">PAD Mechanical Inc.</h1>
         <a href="" class="buy-btn top">Buy Now!</a>
-      </header>
-      <div class="nav-divider"></div>
+      </div>
       <nav class="header-nav-container">
         <script src="/mobile_nav.js"></script>
       </nav>
       <script src="/nav.js"></script>
-    </section>
+    </header>
     <section class="info-container">
       <p class="info-text">
         <b>PAD Mechanical Nutrunner Polishing Tool Kit</b>, is a polishing tool

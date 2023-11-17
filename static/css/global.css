@@ -23,9 +23,9 @@ html {
 }
 
 header {
-  display: flex;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  background-color: var(--blue);
 }
 
 @media screen and (max-width: 600px) {
@@ -74,16 +74,30 @@ h3 {
   color: var(--black);
 }
 
-.header-section {
-  background-color: var(--blue);
+.title-container {
+  padding: 2rem;
+  display: flex;
 }
 
-header h1 {
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.main-title {
   font-size: 4rem;
   align-self: flex-end;
   margin: 0;
   margin-left: 2rem;
   color: var(--white);
+  margin-left: 22rem;
+}
+
+@media screen and (max-width: 900px) {
+  .main-title {
+    margin-left: 16rem;
+    font-size: 3rem;
+  }
 }
 
 .buy-btn {
@@ -102,30 +116,42 @@ header h1 {
   color: red;
 }
 
+@media screen and (max-width: 600px) {
+  .top {
+    display: none;
+  }
+}
+
 .top {
   margin-left: auto;
 }
 
-@media screen and (max-width: 900px) {
-  .header-nav:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 2rem;
-    flex: 1 1 600px;
+@media screen and (max-width: 1000px) {
+  .header-nav {
+    flex: 1 1 200px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  header h1 {
-    font-size: 3rem;
+  .header-nav {
+    margin-bottom: 2rem;
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
-.header-nav:not(:last-child) {
-  margin-right: 8rem;
+.pad-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 20rem;
 }
 
-.pad-logo {
-  height: 6rem;
+@media screen and (max-width: 900px) {
+  .pad-logo {
+    height: 14rem;
+  }
 }
 
 .divider {
@@ -162,9 +188,18 @@ header h1 {
 }
 
 .header-nav-container {
-  margin-top: 2rem;
+  margin-left: 24rem;
+  margin-right: 2rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .header-nav-container {
+    margin-left: 2rem;
+    justify-content: end;
+  }
 }
 
 a {

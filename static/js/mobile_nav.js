@@ -1,12 +1,10 @@
 const menu = `
-<nav class="header-nav-container">
   <a href="/" class="header-nav">HOME</a>
   <a href="/about" class="header-nav">ABOUT US</a>
   <a href="/products" class="header-nav">POLISHING PRODUCTS</a>
   <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
   <a href="/pictures" class="header-nav">PICTURES</a>
   <a href="/contact" class="header-nav">CONTACT</a>
-</nav>
 `;
 
 const closedMobileMenu = `
@@ -18,7 +16,6 @@ const closedMobileMenu = `
 `;
 
 const openMobileMenu = `
-  <nav class="header-nav-container">
     <a href="/" class="header-nav">HOME</a>
     <a href="/about" class="header-nav">ABOUT US</a>
     <a href="/products" class="header-nav">POLISHING PRODUCTS</a>
@@ -30,7 +27,6 @@ const openMobileMenu = `
         <use xlink:href="symbol-defs.svg#icon-cross"></use>
       </svg>
     </button>
-  </nav>
 `;
 
 function checkForMobile() {

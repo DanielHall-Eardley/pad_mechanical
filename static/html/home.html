@@ -18,31 +18,34 @@
     }
 
     .subheading {
-      display: flex;
-      justify-content: center;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      margin-left: 24rem;
     }
 
     @media screen and (max-width: 600px) {
       .banner-image {
         height: 40vh;
       }
+
+      .subheading {
+        display: flex;
+        justify-content: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
     }
   </style>
   <body>
-    <section class="pad-cont header-section">
-      <header>
-        <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
-        <h1>PAD Mechanical Inc.</h1>
+    <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
+    <header>
+      <div class="title-container">
+        <h1 class="main-title">PAD Mechanical Inc.</h1>
         <a href="" class="buy-btn top">Buy Now!</a>
-      </header>
-      <div class="nav-divider"></div>
+      </div>
       <nav class="header-nav-container">
         <script src="/mobile_nav.js"></script>
       </nav>
       <script src="/nav.js"></script>
-    </section>
+    </header>
     <h2 class="subheading">
       The Nutrunner | The Original Truck Wheel Polishing Tool
     </h2>
