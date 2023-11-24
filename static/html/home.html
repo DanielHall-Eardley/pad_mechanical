@@ -12,11 +12,6 @@
   </head>
 
   <style>
-    .banner-image {
-      height: 70vh;
-      background-size: cover;
-    }
-
     .subheading {
       margin-left: 24rem;
     }
@@ -32,6 +27,18 @@
         margin-left: 2rem;
         margin-right: 2rem;
       }
+    }
+
+    .view-window {
+      height: 70vh;
+      width: 80vw;
+      overflow: hidden;
+      background-color: brown;
+    }
+
+    .slide {
+      height: 70vh;
+      width: 80vw;
     }
   </style>
   <body>
@@ -50,7 +57,15 @@
       The Nutrunner | The Original Truck Wheel Polishing Tool
     </h2>
     <div class="center-content">
-      <img src="/tool_pad_strip.jpg" alt="The nutrunner" class="banner-image" />
+      <div class="view-window">
+        <div class="slideshow">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+      </div>
     </div>
     <div class="center-content margin-tb">
       <a href="" class="buy-btn">Buy Now!</a>

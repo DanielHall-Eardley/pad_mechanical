@@ -25,8 +25,8 @@ app.get("/how-to", (req, res) => {
   res.sendFile(filePath);
 });
 
-app.get("/pictures", (req, res) => {
-  const filePath = getHtmlFile("pictures.html");
+app.get("/airplane", (req, res) => {
+  const filePath = getHtmlFile("airplane.html");
   res.sendFile(filePath);
 });
 
@@ -40,8 +40,8 @@ app.get("/safety", (req, res) => {
   res.sendFile(filePath);
 });
 
-app.get("/about", (req, res) => {
-  const filePath = getHtmlFile("about.html");
+app.get("/airstream", (req, res) => {
+  const filePath = getHtmlFile("airstream.html");
   res.sendFile(filePath);
 });
 
@@ -52,6 +52,16 @@ app.get("/contact", (req, res) => {
 
 app.get("/privacy", (req, res) => {
   const filePath = getHtmlFile("privacy.html");
+  res.sendFile(filePath);
+});
+
+app.get("/truck", (req, res) => {
+  const filePath = getHtmlFile("truck.html");
+  res.sendFile(filePath);
+});
+
+app.get("/misc", (req, res) => {
+  const filePath = getHtmlFile("misc.html");
   res.sendFile(filePath);
 });
 

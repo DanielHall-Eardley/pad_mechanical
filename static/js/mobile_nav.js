@@ -1,9 +1,11 @@
 const menu = `
   <a href="/" class="header-nav">HOME</a>
-  <a href="/about" class="header-nav">ABOUT US</a>
-  <a href="/products" class="header-nav">POLISHING PRODUCTS</a>
+  <a href="/airstream" class="header-nav">AIRSTREAM</a>
+  <a href="/pictures" class="header-nav">AIRPLANE</a>
+  <a href="/products" class="header-nav">TRUCK</a>
+  <a href="/products" class="header-nav">MISC</a>
+  <a href="/products" class="header-nav">PRODUCTS</a>
   <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
-  <a href="/pictures" class="header-nav">PICTURES</a>
   <a href="/contact" class="header-nav">CONTACT</a>
 `;
 
@@ -16,12 +18,7 @@ const closedMobileMenu = `
 `;
 
 const openMobileMenu = `
-    <a href="/" class="header-nav">HOME</a>
-    <a href="/about" class="header-nav">ABOUT US</a>
-    <a href="/products" class="header-nav">POLISHING PRODUCTS</a>
-    <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
-    <a href="/pictures" class="header-nav">PICTURES</a>
-    <a href="/contact" class="header-nav">CONTACT</a>
+    ${menu}
     <button class="close-menu-btn">
       <svg class="cross-icon">
         <use xlink:href="symbol-defs.svg#icon-cross"></use>
