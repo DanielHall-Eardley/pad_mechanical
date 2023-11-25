@@ -27,8 +27,10 @@ body {
 }
 
 header {
+  margin-top: 3rem;
   margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-left: 9rem;
+  display: flex;
   background-color: var(--blue);
 }
 
@@ -75,12 +77,7 @@ h3 {
 }
 
 .current-page {
-  color: var(--black);
-}
-
-.title-container {
-  padding: 2rem;
-  display: flex;
+  color: var(--blue);
 }
 
 .title {
@@ -91,15 +88,12 @@ h3 {
 .main-title {
   font-size: 4rem;
   align-self: flex-end;
-  margin: 0;
-  margin-left: 2rem;
   color: var(--white);
-  margin-left: 22rem;
+  margin-left: 13rem;
 }
 
 @media screen and (max-width: 900px) {
   .main-title {
-    margin-left: 16rem;
     font-size: 3rem;
   }
 }
@@ -128,6 +122,8 @@ h3 {
 
 .top {
   margin-left: auto;
+  margin-top: 2rem;
+  margin-right: 2rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -148,14 +144,10 @@ h3 {
 .pad-logo {
   position: absolute;
   top: 2rem;
-  left: 2rem;
+  left: 0;
   height: 20rem;
-}
-
-@media screen and (max-width: 900px) {
-  .pad-logo {
-    height: 14rem;
-  }
+  border-radius: 50%;
+  border: solid var(--white) 2rem;
 }
 
 .divider {
@@ -165,7 +157,7 @@ h3 {
 .open-menu-btn,
 .close-menu-btn {
   border: none;
-  background-color: var(--blue);
+  background: transparent;
 }
 
 .close-menu-btn {
@@ -177,11 +169,11 @@ h3 {
 .cross-icon {
   height: 2rem;
   width: 2rem;
-  fill: var(--white);
+  fill: var(--blue);
 }
 
 .menu-icon {
-  fill: var(--white);
+  fill: var(--blue);
   height: 4rem;
   width: 4rem;
 }
@@ -207,8 +199,7 @@ h3 {
 }
 
 a {
-  background-color: transparent;
-  color: var(--white);
+  color: var(--black);
   border: none;
   font-size: 1.8rem;
   font-weight: 300;

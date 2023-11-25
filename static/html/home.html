@@ -22,8 +22,7 @@
       }
 
       .subheading {
-        display: flex;
-        justify-content: center;
+        text-align: center;
         margin-left: 2rem;
         margin-right: 2rem;
       }
@@ -32,8 +31,12 @@
     .view-window {
       height: 70vh;
       width: 80vw;
-      overflow: hidden;
-      background-color: brown;
+      <!-- overflow: hidden; -->
+    }
+
+    .slideshow {
+      display: grid;
+      grid-auto-flow: column;
     }
 
     .slide {
@@ -42,30 +45,46 @@
     }
   </style>
   <body>
-    <img src="/logored.gif" alt="Company Logo" class="pad-logo" />
     <header>
-      <div class="title-container">
-        <h1 class="main-title">PAD Mechanical Inc.</h1>
-        <a href="" class="buy-btn top">Buy Now!</a>
-      </div>
-      <nav class="header-nav-container">
-        <script src="/mobile_nav.js"></script>
-      </nav>
-      <script src="/nav.js"></script>
+      <img src="/logo.jpg" alt="Company Logo" class="pad-logo" />
+      <h1 class="main-title">PAD Mechanical Inc.</h1>
+      <a href="" class="buy-btn top">Buy Now!</a>
     </header>
+    <nav class="header-nav-container">
+      <script src="/mobile_nav.js"></script>
+    </nav>
+    <script src="/nav.js"></script>
     <h2 class="subheading">
       The Nutrunner | The Original Truck Wheel Polishing Tool
     </h2>
     <div class="center-content">
       <div class="view-window">
         <div class="slideshow">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+          <div class="slide" style="background-color: aqua"></div>
+          <div class="slide" style="background-color: gold"></div>
+          <div class="slide" style="background-color: green"></div>
+          <div class="slide" style="background-color: red"></div>
+          <div class="slide" style="background-color: purple"></div>
         </div>
       </div>
+      <script>
+        const slideshow = document.querySelector(".slideshow");
+        const slides = slideshow.children;
+        const last = slides.length - 1;
+        let current = 0;
+        console.log(slides);
+        const intervalId = setInterval(() => {
+          if (current < last) {
+            current += 1;
+          } else {
+            current = 0;
+          }
+
+          const scrollLength = current * 80;
+          console.log(scrollLength);
+          slideshow.style.transform = `translate(-${scrollLength}vw, 0)`;
+        }, 10000);
+      </script>
     </div>
     <div class="center-content margin-tb">
       <a href="" class="buy-btn">Buy Now!</a>
