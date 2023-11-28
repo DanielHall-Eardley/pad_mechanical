@@ -12,6 +12,20 @@
   </head>
 
   <style>
+    :root {
+      --dark-green: #026670;
+      --light-green: #9fedd7;
+      --green: green;
+      --red: #f90303;
+      --light-yellow: #fef9c7;
+      --dark-yellow: #fce181;
+      --beige: #edeae5;
+      --white: white;
+      --black: black;
+      --gray: gray;
+      --blue: #2596be;
+    }
+
     .subheading {
       margin-left: 24rem;
     }
@@ -31,7 +45,11 @@
     .view-window {
       height: 70vh;
       width: 80vw;
-      <!-- overflow: hidden; -->
+      overflow: hidden;
+    }
+
+    #slideshow-container {
+      flex-direction: column;
     }
 
     .slideshow {
@@ -42,6 +60,25 @@
     .slide {
       height: 70vh;
       width: 80vw;
+    }
+
+    #slide-menu {
+      padding-left: 0;
+    }
+
+    .slide-btn {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: solid var(--blue) 1px;
+    }
+
+    .slide-btn:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    .active {
+      background-color: var(--blue);
     }
   </style>
   <body>
@@ -57,7 +94,7 @@
     <h2 class="subheading">
       The Nutrunner | The Original Truck Wheel Polishing Tool
     </h2>
-    <div class="center-content">
+    <div id="slideshow-container" class="center-content">
       <div class="view-window">
         <div class="slideshow">
           <div class="slide" style="background-color: aqua"></div>
@@ -68,11 +105,50 @@
         </div>
       </div>
       <script>
+        function setMenuBtnClass(btn, currentSlideIndex, btnIndex) {
+          if (currentSlideIndex === btnIndex) {
+            btn.setAttribute("class", "slide-btn active");
+          } else {
+            btn.setAttribute("class", "slide-btn");
+          }
+        }
+
+        function scrollSlideShow(currentSlide, slideshow) {
+          const scrollLength = currentSlide * 80;
+          slideshow.style.transform = `translate(-${scrollLength}vw, 0)`;
+        }
+
+        function setActiveBtn(slideMenu, currentSlideIndex) {
+          menuButtons = Array.from(slideMenu.children);
+          for (let i = 0; i < menuButtons.length; i++) {
+            setMenuBtnClass(menuButtons[i], currentSlideIndex, i);
+          }
+        }
+
         const slideshow = document.querySelector(".slideshow");
+        const slideshowContainer = document.querySelector(
+          "#slideshow-container"
+        );
+        const slideMenu = document.createElement("menu");
+        slideMenu.setAttribute("id", "slide-menu");
         const slides = slideshow.children;
         const last = slides.length - 1;
         let current = 0;
-        console.log(slides);
+
+        for (let i = 0; i < slides.length; i++) {
+          const button = document.createElement("button");
+          button.setAttribute("id", i);
+          button.addEventListener("click", (event) => {
+            scrollSlideShow(i, slideshow);
+            current = i;
+            setActiveBtn(slideMenu, current);
+          });
+          setMenuBtnClass(button, current, i);
+          slideMenu.append(button);
+        }
+
+        slideshowContainer.append(slideMenu);
+
         const intervalId = setInterval(() => {
           if (current < last) {
             current += 1;
@@ -80,9 +156,8 @@
             current = 0;
           }
 
-          const scrollLength = current * 80;
-          console.log(scrollLength);
-          slideshow.style.transform = `translate(-${scrollLength}vw, 0)`;
+          scrollSlideShow(current, slideshow);
+          setActiveBtn(slideMenu, current);
         }, 10000);
       </script>
     </div>

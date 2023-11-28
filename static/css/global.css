@@ -141,13 +141,17 @@ h3 {
   }
 }
 
-.pad-logo {
+.pad-logo,
+.pad-logo::before {
   position: absolute;
   top: 2rem;
   left: 0;
   height: 20rem;
   border-radius: 50%;
   border: solid var(--white) 2rem;
+  background-image: var(--white);
+  content: "";
+  display: block;
 }
 
 .divider {
