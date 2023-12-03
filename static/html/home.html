@@ -26,59 +26,16 @@
       --blue: #2596be;
     }
 
-    .subheading {
-      margin-left: 24rem;
-    }
-
     @media screen and (max-width: 600px) {
       .banner-image {
         height: 40vh;
       }
-
-      .subheading {
-        text-align: center;
-        margin-left: 2rem;
-        margin-right: 2rem;
-      }
     }
 
-    .view-window {
-      height: 70vh;
+    .banner {
+      border: solid black 1px;
+      height: 65vh;
       width: 80vw;
-      overflow: hidden;
-    }
-
-    #slideshow-container {
-      flex-direction: column;
-    }
-
-    .slideshow {
-      display: grid;
-      grid-auto-flow: column;
-    }
-
-    .slide {
-      height: 70vh;
-      width: 80vw;
-    }
-
-    #slide-menu {
-      padding-left: 0;
-    }
-
-    .slide-btn {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: solid var(--blue) 1px;
-    }
-
-    .slide-btn:not(:last-child) {
-      margin-right: 3rem;
-    }
-
-    .active {
-      background-color: var(--blue);
     }
   </style>
   <body>
@@ -87,79 +44,13 @@
       <h1 class="main-title">PAD Mechanical Inc.</h1>
       <a href="" class="buy-btn top">Buy Now!</a>
     </header>
+    <h2 class="subheading">Home of the Nutrunner Polishing Tool</h2>
     <nav class="header-nav-container">
       <script src="/mobile_nav.js"></script>
     </nav>
     <script src="/nav.js"></script>
-    <h2 class="subheading">
-      The Nutrunner | The Original Truck Wheel Polishing Tool
-    </h2>
-    <div id="slideshow-container" class="center-content">
-      <div class="view-window">
-        <div class="slideshow">
-          <div class="slide" style="background-color: aqua"></div>
-          <div class="slide" style="background-color: gold"></div>
-          <div class="slide" style="background-color: green"></div>
-          <div class="slide" style="background-color: red"></div>
-          <div class="slide" style="background-color: purple"></div>
-        </div>
-      </div>
-      <script>
-        function setMenuBtnClass(btn, currentSlideIndex, btnIndex) {
-          if (currentSlideIndex === btnIndex) {
-            btn.setAttribute("class", "slide-btn active");
-          } else {
-            btn.setAttribute("class", "slide-btn");
-          }
-        }
-
-        function scrollSlideShow(currentSlide, slideshow) {
-          const scrollLength = currentSlide * 80;
-          slideshow.style.transform = `translate(-${scrollLength}vw, 0)`;
-        }
-
-        function setActiveBtn(slideMenu, currentSlideIndex) {
-          menuButtons = Array.from(slideMenu.children);
-          for (let i = 0; i < menuButtons.length; i++) {
-            setMenuBtnClass(menuButtons[i], currentSlideIndex, i);
-          }
-        }
-
-        const slideshow = document.querySelector(".slideshow");
-        const slideshowContainer = document.querySelector(
-          "#slideshow-container"
-        );
-        const slideMenu = document.createElement("menu");
-        slideMenu.setAttribute("id", "slide-menu");
-        const slides = slideshow.children;
-        const last = slides.length - 1;
-        let current = 0;
-
-        for (let i = 0; i < slides.length; i++) {
-          const button = document.createElement("button");
-          button.setAttribute("id", i);
-          button.addEventListener("click", (event) => {
-            scrollSlideShow(i, slideshow);
-            current = i;
-            setActiveBtn(slideMenu, current);
-          });
-          setMenuBtnClass(button, current, i);
-          slideMenu.append(button);
-        }
-
-        slideshowContainer.append(slideMenu);
-
-        const intervalId = setInterval(() => {
-          if (current < last) {
-            current += 1;
-          } else {
-            current = 0;
-          }
-
-          scrollSlideShow(current, slideshow);
-          setActiveBtn(slideMenu, current);
-        }, 10000);
-      </script>
+    <div class="center-content">
+      <section class="banner"></section>
     </div>
     <div class="center-content margin-tb">
       <a href="" class="buy-btn">Buy Now!</a>

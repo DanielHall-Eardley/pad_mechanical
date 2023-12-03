@@ -1,12 +1,12 @@
 const menu = `
   <a href="/" class="header-nav">HOME</a>
   <a href="/airstream" class="header-nav">AIRSTREAM</a>
-  <a href="/pictures" class="header-nav">AIRPLANE</a>
-  <a href="/products" class="header-nav">TRUCK</a>
-  <a href="/products" class="header-nav">MISC</a>
-  <a href="/products" class="header-nav">PRODUCTS</a>
+  <a href="/airplane" class="header-nav">AIRPLANE</a>
+  <a href="/truck" class="header-nav">TRUCK</a>
+  <a href="/products" class="header-nav">PURCHASE PRODUCTS</a>
   <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
   <a href="/contact" class="header-nav">CONTACT</a>
+  <a href="/misc" class="header-nav">MISC</a>
 `;
 
 const closedMobileMenu = `

@@ -188,17 +188,27 @@ h3 {
 }
 
 .header-nav-container {
-  margin-left: 24rem;
+  margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  margin-left: 22rem;
 }
 
 @media screen and (max-width: 600px) {
   .header-nav-container {
-    margin-left: 2rem;
     justify-content: end;
+  }
+
+  .subheading {
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
@@ -228,4 +238,41 @@ a:active {
 
 .footer-nav {
   color: var(--dark-yellow);
+}
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.slideshow {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.view-window {
+  height: 56vh;
+  width: 40vw;
+  overflow: hidden;
+}
+
+.view-window:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.slide {
+  object-fit: cover;
+  height: 50vh;
+  width: 40vw;
+}
+
+.picture-title {
+  background-color: var(--blue);
+  height: 6vh;
+  color: var(--white);
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
 }
