@@ -146,7 +146,7 @@ h3 {
   position: absolute;
   top: 2rem;
   left: 0;
-  height: 20rem;
+  height: 19rem;
   border-radius: 50%;
   border: solid var(--white) 2rem;
   background-image: var(--white);
@@ -156,6 +156,7 @@ h3 {
 
 .divider {
   border-top: solid var(--gray) 1px;
+  margin-bottom: 2rem;
 }
 
 .open-menu-btn,
@@ -275,4 +276,33 @@ a:active {
   padding-left: 1rem;
   display: flex;
   align-items: center;
+}
+
+.section-heading {
+  color: var(--red);
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.explanation {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.pdf-overlay {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+}
+
+.pdf-link {
+  margin-bottom: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.7rem;
+}
+
+.show-pdf {
+  display: block;
 }
