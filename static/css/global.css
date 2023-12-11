@@ -241,10 +241,23 @@ a:active {
   color: var(--dark-yellow);
 }
 
-.slideshow-container {
+.scrollbtn-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+}
+
+.scroll-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 4px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  margin-top: 2rem;
+}
+
+.scroll-btn:first-child {
+  margin-right: 3rem;
 }
 
 .slideshow {
@@ -258,24 +271,22 @@ a:active {
   overflow: hidden;
 }
 
-.view-window:not(:last-child) {
-  margin-right: 5rem;
-}
-
 .slide {
   object-fit: cover;
   height: 50vh;
   width: 40vw;
 }
 
-.picture-title {
+.picture-category {
   background-color: var(--blue);
   height: 6vh;
   color: var(--white);
   margin: 0;
   padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .section-heading {
