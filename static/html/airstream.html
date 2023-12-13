@@ -16,6 +16,7 @@
       display: flex;
       justify-content: space-evenly;
       margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
   </style>
   <body>
@@ -38,55 +39,57 @@
           </button>
         </li>
         <li>
-          <button id="teflon" class="pdf-link">Teflon Characteristics</button>
+          <button id="teflon-link" class="pdf-link">
+            Teflon Characteristics
+          </button>
         </li>
         <li>
-          <button id="wash-polish" class="pdf-link">
+          <button id="wash-polish-link" class="pdf-link">
             Wash and Polish Tech Page
           </button>
         </li>
       </ul>
       <aside id="alclad-pdf" class="pdf-overlay">
-        <button class="close-pdf-btn">
-          <svg class="menu-icon">
-            <use xlink:href="symbol-defs.svg#icon-menu"></use>
-          </svg>
-        </button>
         <embed
           src="/pdf/alclad_tech_page.pdf"
           type="application/pdf"
           class="pdf"
-          height="100%"
-          width="100%"
+          height="90%"
+          width="80%"
         />
-      </aside>
-      <aside id="teflon-pdf" class="pdf-overlay">
         <button class="close-pdf-btn">
-          <svg class="menu-icon">
-            <use xlink:href="symbol-defs.svg#icon-menu"></use>
+          <svg>
+            <use xlink:href="symbol-defs.svg#icon-cross"></use>
           </svg>
         </button>
+      </aside>
+      <aside id="teflon-pdf" class="pdf-overlay">
         <embed
           src="/pdf/teflon.pdf"
           type="application/pdf"
           class="pdf"
-          height="100%"
-          width="100%"
+          height="90%"
+          width="80%"
         />
-      </aside>
-      <aside id="wash-polish-pdf" class="pdf-overlay">
         <button class="close-pdf-btn">
-          <svg class="menu-icon">
-            <use xlink:href="symbol-defs.svg#icon-menu"></use>
+          <svg>
+            <use xlink:href="symbol-defs.svg#icon-cross"></use>
           </svg>
         </button>
+      </aside>
+      <aside id="wash-polish-pdf" class="pdf-overlay">
         <embed
           src="/pdf/wash_polish.pdf"
           type="application/pdf"
           class="pdf"
-          height="100%"
-          width="100%"
+          height="90%"
+          width="80%"
         />
+        <button class="close-pdf-btn">
+          <svg>
+            <use xlink:href="symbol-defs.svg#icon-cross"></use>
+          </svg>
+        </button>
       </aside>
     </section>
     <section class="airstream-slides">
@@ -588,4 +591,5 @@
     </footer>
   </body>
   <script src="/slideshow.js"></script>
+  <script src="/pdf.js"></script>
 </html>
