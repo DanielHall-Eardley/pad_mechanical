@@ -17,20 +17,24 @@
 
       .info-text {
         margin-bottom: 1rem;
-        grid-column: 1 / 3;
         padding-right: 20%;
         padding-left: 20%;
       }
 
       .photo-container {
-        display: flex;
+        display: grid;
         margin-bottom: 2rem;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 30rem;
+        gap: 1rem;
       }
 
       .photo-container img {
-        height: 30rem;
-        margin-right: 1rem;
+        height: 100%;
+        width: 100%;
+        box-shadow: 3px 3px 5px var(--gray);
+        border-radius: 4px;
+        background-size: cover;
       }
 
       @media screen and (max-width: 900px) {
@@ -41,9 +45,8 @@
       }
 
       @media screen and (max-width: 600px) {
-        .photo-container img {
-          height: auto;
-          width: 100%;
+        .photo-container {
+          grid-auto-rows: 40rem;
         }
       }
     </style>
@@ -72,6 +75,9 @@
         <img src="/tool_pad_strip.jpg" alt="A buffing strip" />
         <img src="/gun_tool_pad.jpg" alt="a polishing pad" />
         <img src="/gun_tool_strip.jpg" alt="a buffing strip" />
+        <img src="/kit.jpg" alt="The tool kit" />
+        <img src="/tool_kit.jpg" alt="The tool kit" />
+        <img src="/aluminum_polish.jpg" alt="The tool kit" />
       </div>
     </article>
     <div class="center-content margin-tb">
@@ -87,6 +93,7 @@
       </p>
       <div class="photo-container">
         <img src="/buffing_strip.jpg" alt="A buffing strip" />
+        <img src="/replace_buff.jpg" alt="A buffing strip" />
         <img src="/tool_buffing_strip-min.jpg" alt="a tool buffing strip" />
       </div>
     </article>
@@ -103,7 +110,8 @@
       </p>
       <div class="photo-container">
         <img src="/polish_pad.jpg" alt="a polishing pad" />
-        <img src="/tool_pad-min.jpg" alt="a tool buffing strip" />
+        <img src="/tool_pad-min.jpg" alt="a polishing pad" />
+        <img src="/replace_pad.jpg" alt="a polishing pad" />
       </div>
     </article>
     <div class="center-content margin-tb">

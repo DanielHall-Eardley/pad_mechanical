@@ -244,7 +244,7 @@ a:active {
   color: var(--red);
 }
 
-.footer-nav-container {
+footer {
   height: 10vh;
   background-color: var(--gray);
   display: flex;
@@ -254,6 +254,10 @@ a:active {
 
 .footer-nav {
   color: var(--dark-yellow);
+}
+
+.author {
+  font-size: 1.5rem;
 }
 
 .scrollbtn-container {

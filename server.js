@@ -20,11 +20,6 @@ app.get("/products", (req, res) => {
   res.sendFile(filePath);
 });
 
-app.get("/how-to", (req, res) => {
-  const filePath = getHtmlFile("how-to.html");
-  res.sendFile(filePath);
-});
-
 app.get("/airplane", (req, res) => {
   const filePath = getHtmlFile("airplane.html");
   res.sendFile(filePath);

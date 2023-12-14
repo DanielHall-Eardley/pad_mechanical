@@ -4,7 +4,6 @@ const menu = `
   <a href="/airplane" class="header-nav">AIRPLANE</a>
   <a href="/truck" class="header-nav">TRUCK</a>
   <a href="/products" class="header-nav">PURCHASE PRODUCTS</a>
-  <a href="/how-to" class="header-nav">HOW TO GUIDE</a>
   <a href="/contact" class="header-nav">CONTACT</a>
   <a href="/misc" class="header-nav">MISC</a>
 `;
