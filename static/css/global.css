@@ -27,11 +27,11 @@ body {
 }
 
 header {
-  margin-top: 3rem;
   margin-bottom: 2rem;
   margin-left: 9rem;
   display: flex;
   background-color: var(--blue);
+  margin-top: 3.2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -86,15 +86,24 @@ h3 {
 }
 
 .main-title {
-  font-size: 4rem;
-  align-self: flex-end;
+  font-size: 5.4rem;
   color: var(--white);
   margin-left: 13rem;
+  letter-spacing: 4px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .main-title {
-    font-size: 3rem;
+    font-size: 4rem;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-title {
+    font-size: 2.5rem;
+    margin-left: 7rem;
+    height: 4.8rem;
   }
 }
 
@@ -107,11 +116,12 @@ h3 {
   align-items: center;
   border-radius: 4px;
   border: solid var(--red) 2px;
+  color: var(--white);
 }
 
 .buy-btn:hover {
   background-color: var(--white);
-  color: red;
+  color: var(--red);
 }
 
 @media screen and (max-width: 600px) {
@@ -144,10 +154,10 @@ h3 {
 .pad-logo,
 .pad-logo-background {
   position: absolute;
-  top: 2rem;
+  top: 0;
   left: 0;
-  height: 19rem;
-  width: 19rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   border: solid var(--white) 2rem;
   display: block;
@@ -213,7 +223,10 @@ h3 {
 }
 
 .subheading {
-  margin-left: 22rem;
+  margin-top: 3.5rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -248,21 +261,46 @@ footer {
   height: 10vh;
   background-color: var(--gray);
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
 .footer-nav {
   color: var(--dark-yellow);
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
 }
 
 .author {
   font-size: 1.5rem;
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    display: block;
+    height: auto;
+  }
+
+  .footer-nav {
+    margin: 2rem 1rem;
+  }
+
+  .author {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
 }
 
 .scrollbtn-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 .scroll-btn {
@@ -272,11 +310,14 @@ footer {
   border: none;
   width: 80px;
   height: 30px;
-  margin-top: 2rem;
 }
 
 .scroll-btn:first-child {
   margin-right: 3rem;
+}
+
+.slideshows-container {
+  margin: 2rem;
 }
 
 .slideshow {
@@ -285,38 +326,36 @@ footer {
 }
 
 .view-window {
-  height: 56vh;
-  width: 40vw;
+  width: 60vw;
   overflow: hidden;
 }
 
 .slide {
   object-fit: cover;
-  height: 50vh;
-  width: 40vw;
+  height: 550px;
+  width: 60vw;
 }
 
 @media screen and (max-width: 750px) {
   .view-window {
-    height: 56vh;
     width: 100vw;
     overflow: hidden;
   }
 
   .slide {
     object-fit: cover;
-    height: 50vh;
+    height: 300px;
     width: 100vw;
   }
 
-  .scrollbtn-container {
-    margin-bottom: 2rem;
+  .slideshows-container {
+    margin: 0;
   }
 }
 
 .picture-category {
   background-color: var(--blue);
-  height: 6vh;
+  height: 50px;
   color: var(--white);
   margin: 0;
   padding-left: 1rem;
@@ -352,10 +391,16 @@ footer {
 }
 
 .pdf-link {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
   border: none;
   background-color: transparent;
   font-size: 1.7rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pdf-link:hover {
+  color: var(--red);
 }
 
 .close-pdf-btn {

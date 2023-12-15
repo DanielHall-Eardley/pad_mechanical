@@ -30,16 +30,17 @@ function scrollSlideShow(slideNumber, slideshow, direction, title, slideWidth) {
 
 function updateSlideName(slideNumber, slides, title) {
   const slideNameArray = slides[slideNumber].src.split("/");
-  const slideName = slideNameArray[slideNameArray.length - 1];
+  const slideNameRaw = slideNameArray[slideNameArray.length - 1];
+  const slideName = slideNameRaw.split(".")[0];
   title.innerText = slideName;
 }
 
-function checkScreenWidth() {
+function getSlideWidth() {
   const screenWidth = window.innerWidth;
   if (screenWidth < 750) {
-    return true;
+    return 100;
   }
-  return false;
+  return 60;
 }
 
 const containers = Array.from(
@@ -51,20 +52,14 @@ containers.forEach((container) => {
   const prevBtn = container.querySelector(".prev");
   const nextBtn = container.querySelector(".next");
   const title = container.querySelector(".picture-title");
-  const slideWidth = checkScreenWidth() ? 100 : 40;
+  const slideWidth = getSlideWidth();
 
   let current = 0;
-  const intervalId = setInterval(() => {
-    current = scrollSlideShow(current, slideshow, "next", title, slideWidth);
-  }, 10000);
-
   prevBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
     current = scrollSlideShow(current, slideshow, "prev", title, slideWidth);
   });
 
   nextBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
     current = scrollSlideShow(current, slideshow, "next", title, slideWidth);
   });
 });

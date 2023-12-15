@@ -7,21 +7,35 @@
       name="description"
       content="The Nutrunner is a truck wheel nut polishing tool created by PAD Mechanical "
     />
+    <meta name="author" content="Built by Daniel Hall-Eardley, 2023." />
     <title>PAD Mechanical</title>
+    <link rel="shortcut icon" type="image/jpg" href="/logo.jpg" />
     <link rel="stylesheet" href="/global.css" />
   </head>
 
   <style>
+    .banner {
+      width: 80vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-auto-rows: 38vh;
+      gap: 1rem;
+    }
+
+    .banner-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
     @media screen and (max-width: 600px) {
       .banner-image {
         height: 40vh;
       }
-    }
 
-    .banner {
-      border: solid black 1px;
-      height: 65vh;
-      width: 80vw;
+      .banner {
+        width: auto;
+      }
     }
   </style>
   <body>
@@ -31,31 +45,56 @@
       <h1 class="main-title">PAD Mechanical Inc.</h1>
       <a href="" class="buy-btn top">Buy Now!</a>
     </header>
-    <h2 class="subheading">Home of the Nutrunner Polishing Tool</h2>
+    <h2 class="subheading">
+      The PAD Polishing System, Home of the Nutrunner Polishing Tool
+    </h2>
     <div class="divider"></div>
     <nav class="header-nav-container">
       <script src="/mobile_nav.js"></script>
     </nav>
     <script src="/nav.js"></script>
-    <h3 class="section-heading">"FROM AVIATION TO YOU"</h3>
-    <p class="explanation">
-      A unique way in polishing aluminum surfaces from Aviation to Airstream
-      Trailers and more, using the “PAD Mechanical Polishing System”.
-    </p>
+    <div class="divider"></div>
     <div class="center-content">
-      <section class="banner"></section>
+      <section class="banner">
+        <img
+          src="/aircraft_pictures/AC28.jpg"
+          alt="Aircraft polishing"
+          class="banner-img"
+        />
+        <img
+          src="/truck_pictures/TR9.jpg"
+          alt="Truck polishing"
+          class="banner-img"
+        />
+        <div id="player"></div>
+        <img
+          src="/airstream_pictures/AS10.jpg"
+          alt="AirStream polishing"
+          class="banner-img"
+        />
+        <img
+          src="/misc_pictures/MS7.jpg"
+          alt="Truck polishing"
+          class="banner-img"
+        />
+        <img src="/kit.jpg" alt="Polishing kit" class="banner-img" />
+      </section>
     </div>
     <div class="center-content margin-tb">
       <a href="" class="buy-btn">Buy Now!</a>
     </div>
     <footer>
-      <a href="/privacy" class="footer-nav">Privacy policy</a>
-      <a href="/safety" class="footer-nav">Tool Safety</a>
-      <a href="/warranty" class="footer-nav">Warranty</a>
-      <span class="author">
-        Created by Karim Hawas, 2023. <br />
-        Built by Daniel Hall-Eardley, 2023.
-      </span>
+      <nav class="footer-nav">
+        <a href="/privacy" class="footer-nav">Privacy policy</a>
+        <a href="/safety" class="footer-nav">Tool Safety</a>
+        <a href="/warranty" class="footer-nav">Warranty</a>
+      </nav>
+      <p class="author">
+        Created by Karim Hawas, <br />
+        Environmental Solutions, 2023.
+      </p>
     </footer>
   </body>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="/youtube.js"></script>
 </html>

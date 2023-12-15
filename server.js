@@ -20,7 +20,7 @@ app.get("/products", (req, res) => {
   res.sendFile(filePath);
 });
 
-app.get("/airplane", (req, res) => {
+app.get("/aircraft", (req, res) => {
   const filePath = getHtmlFile("airplane.html");
   res.sendFile(filePath);
 });

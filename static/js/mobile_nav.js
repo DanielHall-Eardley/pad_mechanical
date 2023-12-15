@@ -1,11 +1,11 @@
 const menu = `
-  <a href="/" class="header-nav">HOME</a>
-  <a href="/airstream" class="header-nav">AIRSTREAM</a>
-  <a href="/airplane" class="header-nav">AIRPLANE</a>
-  <a href="/truck" class="header-nav">TRUCK</a>
-  <a href="/products" class="header-nav">PURCHASE PRODUCTS</a>
-  <a href="/contact" class="header-nav">CONTACT</a>
-  <a href="/misc" class="header-nav">MISC</a>
+  <a href="/" class="header-nav">Home</a>
+  <a href="/aircraft" class="header-nav">Aircraft</a>
+  <a href="/airstream" class="header-nav">Airstream</a>
+  <a href="/truck" class="header-nav">Trucks</a>
+  <a href="/misc" class="header-nav">Misc Pics</a>
+  <a href="/products" class="header-nav">Purchase Products</a>
+  <a href="/contact" class="header-nav">Contacts</a>
 `;
 
 const closedMobileMenu = `
