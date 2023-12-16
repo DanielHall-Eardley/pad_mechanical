@@ -2,15 +2,30 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const getHtmlFile = require("./getHtmlFile");
+const fs = require("fs");
 
 const assetUrl = path.join(__dirname, "assets");
 const cssUrl = path.join(__dirname, "static", "css");
 const jsUrl = path.join(__dirname, "static", "js");
 
+function viewCount(req, res, next) {
+  const data = fs.readFileSync("./counter.txt", {
+    encoding: "utf8",
+    flag: "r",
+  });
+  let counter = parseInt(data);
+  counter += 1;
+  console.log(counter);
+  fs.writeFileSync("./counter.txt", counter.toString());
+  res.set("View-Count", counter);
+  next();
+}
+
 app.use(express.static(assetUrl));
 app.use(express.static(cssUrl));
 app.use(express.static(jsUrl));
-app.get("/", (req, res) => {
+
+app.get("/", viewCount, (req, res) => {
   const filePath = getHtmlFile("home.html");
   res.sendFile(filePath);
 });
