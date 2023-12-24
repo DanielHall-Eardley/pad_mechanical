@@ -10,6 +10,7 @@ const menu = `
 
 const closedMobileMenu = `
     <button class="open-menu-btn">
+    MENU
       <svg class="menu-icon">
         <use xlink:href="symbol-defs.svg#icon-menu"></use>
       </svg>

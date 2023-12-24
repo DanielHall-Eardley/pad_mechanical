@@ -184,6 +184,13 @@ h3 {
   margin-bottom: 2rem;
 }
 
+.open-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+
 .open-menu-btn,
 .close-menu-btn {
   border: none;
@@ -317,7 +324,13 @@ footer {
 }
 
 .slideshows-container {
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.slideshow-container {
+  margin-bottom: 3rem;
 }
 
 .slideshow {
@@ -384,49 +397,20 @@ footer {
   margin-top: 1rem;
 }
 
-.pdf-overlay {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pdf-links li {
+  margin-bottom: 14px;
 }
 
 .pdf-link {
-  margin-bottom: 1.3rem;
   border: none;
   background-color: transparent;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   text-decoration: underline;
   cursor: pointer;
-}
-
-.pdf-link:hover {
+  font-weight: bold;
   color: var(--red);
 }
 
-.close-pdf-btn {
-  margin-bottom: 1rem;
-  border: none;
-  background-color: transparent;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
-  align-self: flex-end;
-}
-
-.close-pdf-btn svg {
-  height: 2rem;
-  width: 2rem;
-  fill: var(--white);
-}
-
-.show-pdf {
-  visibility: visible;
-  overflow: hidden;
+.pdf-link:hover {
+  color: var(--blue);
 }
