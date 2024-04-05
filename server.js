@@ -25,7 +25,7 @@ app.use(express.static(assetUrl));
 app.use(express.static(cssUrl));
 app.use(express.static(jsUrl));
 
-app.get("/", viewCount, (req, res) => {
+app.get("/", /* viewCount, */ (req, res) => {
   const filePath = getHtmlFile("home.html");
   res.sendFile(filePath);
 });
